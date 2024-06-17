@@ -81,7 +81,7 @@ async def top_headlines(country: str = "us", category: str = "general"):
         return {"error": result}
 
 @app.get("/top-science-headlines")
-async def top_headlines(country: str = "us", category: str = ""):
+async def top_headlines(country: str = "us", category: str = "science"):
     success, result = get_top_headlines(country, category)
     if success:
         return result
