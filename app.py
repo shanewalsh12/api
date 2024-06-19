@@ -1,10 +1,13 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 import os
 import requests
 import uvicorn
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 #API Key for newsapi.org
 API_KEY = "5094cb4f887149b5800377bd7771b464"
