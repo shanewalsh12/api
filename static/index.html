@@ -23,10 +23,17 @@
         }
         a {
             text-decoration: none; 
-            color: #007bff; 
+            color: #007bff; /* Default link color */
+            display: inline-block; /* Ensures the entire link area is clickable */
+            padding: 5px 10px; /* Adds padding inside the link for clickable area */
+            border-radius: 5px; /* Rounds the corners of the link */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+        a:hover {
+            background-color: #f0f0f0; /* Light gray background on hover */
         }
         a:visited {
-            color: purple;
+            color: #800080; /* Purple color for visited links */
         }
     </style>
 </head>
